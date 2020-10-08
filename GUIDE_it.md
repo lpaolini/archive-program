@@ -82,10 +82,6 @@ I file non-di-testo includono file destinati a rappresentare immagini e document
 
 Non esiste un singolo suffisso che indichi i file di testo. Piuttosto, per il codice sorgente, è più probabile che il suffisso indichi in quale linguaggio di programmazione o markup è scritto il codice. I linguaggi di programmazione e markup saranno descritti più dettagliatamente di seguito.
 
-
-
-
-
 ## Come estrarre i contenuti dell'archivio
 
 Qui forniremo una panoramica su come decomprimere un particolare repository archiviato nei suoi vari file costituenti. Anche in questo caso, questo processo consiste in:
@@ -96,19 +92,19 @@ Qui forniremo una panoramica su come decomprimere un particolare repository arch
 
 3. Decomprimere il file binario in un file di archivio più lungo e non compresso.
 
-4. Decomprimere il file di archivio nei file secondari separati che contiene. Si noti tuttavia che i dati di archivio sono generalmente comprensibili, sebbene disordinati, anche se questo passaggio viene omesso.
+4. Scindere il file di archivio nei file secondari separati che contiene. Si noti tuttavia che i dati di archivio sono generalmente comprensibili, sebbene disordinati, anche se questo passaggio viene omesso.
 
-5. Infine, convertire ciascuno di quei sottofile - sequenze di 1 e 0 che possono variare da molto brevi a molto lunghe - in caratteri scritti, se sono file di testo.
+5. Infine, convertire ciascuno di quei sottofile -- sequenze di 1 e 0 che possono variare da molto brevi a molto lunghe -- in caratteri scritti, se sono file di testo.
 
 ### Identificazione della bobina e dei frame specifici su cui sono archiviati i dati del repository
 
-Ogni bobina di pellicola inizia con una parte iniziale della pellicola vuota, quindi il fotogramma di riferimento zero, che consiste in un rettangolo nero pieno in un angolo di un fotogramma altrimenti vuoto. Il prossimo frame leggibile dall'uomo è il Control Frame, con le informazioni sulla bobina. Di seguito è riportato il sommario, che a sua volta include un elenco di file di dati utente.
+Ogni bobina di pellicola inizia con una parte iniziale della pellicola vuota, quindi il fotogramma di riferimento zero, che consiste in un rettangolo nero pieno in un angolo di un fotogramma vuoto per la restante parte. Il prossimo frame leggibile dall'uomo è il Control Frame, con le informazioni sulla bobina. Di seguito è riportato il sommario, che a sua volta include un elenco di file di dati utente.
 
 Ogni repository su questa bobina è uno di quei file di dati utente. L'elenco include un ID univoco, un ID file e un nome per ciascuno di questi file. Ad esempio, il repository CPython dell'account Python potrebbe avere l'ID file elencato come 12345 e il nome elencato come python_cpython.tar.
 
 Di seguito all'elenco dei file di dati utente c'è un elenco di posizioni dei dati digitali. Questo elenco include l'ID del file, un frame iniziale, un byte iniziale, un frame finale e un byte finale. Quindi, usando l'ipotetico esempio CPython, l'elemento in questo elenco con l'ID 12345 potrebbe avere un frame iniziale di 054321, un byte iniziale di 03210321, un frame finale di 054545 e un byte finale di 12321232.
 
-Ciò significa che, per ottenere i dati CPython: Vai al frame 54321 di questa bobina di pellicola. Decodificare tutti i frame dal frame iniziale, 54321, al frame finale, 54545, in valori binari, con i mezzi descritti di seguito. Questo ti darà 225 pezzi di dati numerati da 54321 a 54545, che inizieranno con una serie di pezzi vuoti senza dati. Elimina i primi 3210320 byte nella prima parte di dati non vuota. Aggiungi tutti i dati "centrali", in ordine. Infine, aggiungi i primi 12321232 byte dall'ultimo pezzo di dati, 54545. Ora hai assemblato il repository CPython completo, come un singolo file di archivio compresso.
+Ciò significa che, per ottenere i dati CPython: Vai al frame 54321 di questa bobina di pellicola. Decodificare tutti i frame dal frame iniziale, 54321, al frame finale, 54545, in valori binari, con i mezzi descritti di seguito. Questo ti darà 225 blocchi di dati numerati da 54321 a 54545, che inizieranno con una serie di blocchi vuoti senza dati. Elimina i primi 3210320 byte nel primo blocco di dati non vuoto. Aggiungi tutti i dati 'centrali', in ordine. Infine, aggiungi i primi 12321232 byte dall'ultimo blocco di dati, 54545. Ora hai assemblato il repository CPython completo, come un singolo file di archivio compresso.
 
 ### Decodifica dai codici QR in un file binario
 
