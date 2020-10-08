@@ -108,31 +108,31 @@ Ciò significa che, per ottenere i dati CPython: Vai al frame 54321 di questa bo
 
 ### Decodifica dai codici QR in un file binario
 
-I dettagli su come decodificare i fotogrammi del film in dati binari si trovano nelle Informazioni di rappresentazione leggibili dall'uomo che si trovano dopo l'indice all'inizio di ogni bobina di film nell'archivio. Questa informazione si trova su ogni bobina in modo che, anche se una singola bobina è separata dall'archivio, sarà comunque possibile decifrarne il contenuto. Tali Informazioni sulla rappresentanza includono, in ordine:
+I dettagli su come decodificare i fotogrammi del film in dati binari si trovano nelle Informazioni sulla Rappresentazione leggibili dall'uomo che si situate dopo l'indice all'inizio di ogni bobina di film nell'archivio. Questa informazione si trova su ogni bobina in modo che, anche se una singola bobina è separata dall'archivio, sarà comunque possibile decifrarne il contenuto. Tali Informazioni sulla Rappresentazione includono, in ordine:
 
 1. Una guida al programma GitHub Archive (questo documento)
 
-2. Indice descrittivo di GitHub, un elenco e una breve descrizione di tutti i repository su questo reel
+2. Indice descrittivo di GitHub, un elenco e una breve descrizione di tutti i repository su questa bobina
 
-3. Descrizione delle informazioni sulla rappresentazione
+3. Descrizione delle Informazioni sulla Rappresentazione
 
-4. Conservazione digitale e come recuperare i dati, una panoramica dei dettagli sul recupero dei dati
+4. Conservazione Digitale e Come Recuperare i Dati, una panoramica dei dettagli sul recupero dei dati
 
-5. Descrizione del supporto di memorizzazione
+5. Descrizione del Supporto di Memorizzazione
 
-6. Tecnologia di recupero dati
+6. Tecnologia di Recupero Dati
 
-7. Struttura della bobina di conservazione generica (formato bobina)
+7. Struttura della Bobina di Conservazione Generica (formato bobina)
 
-8. Descrizione del formato del frame 4K generico
+8. Descrizione del Formato del Frame 4K Generico
 
-9. Descrizione della libreria di unboxing (per i codici QR)
+9. Descrizione della Libreria di Unboxing (per i codici QR)
 
 10. Unboxing del codice sorgente della libreria
 
 11. Specifica del formato dati ASCII
 
-12. Specifica del linguaggio di programmazione C.
+12. Specifica del linguaggio di programmazione C
 
 13. Codice sorgente del file di archivio TAR
 
@@ -140,11 +140,11 @@ I dettagli su come decodificare i fotogrammi del film in dati binari si trovano 
 
 15. Specifica del formato file XZ (per compressione / decompressione, descritto di seguito)
 
-Il sesto di questi elementi, il documento Data Retrieval Technology, descrive i requisiti e i processi per utilizzare uno scanner per acquisire i dati su un singolo fotogramma di pellicola codificato digitalmente e trasformarlo in una forma suscettibile di analisi al computer. L'ottavo di essi, la descrizione del formato Generic 4K Frame, fornisce le informazioni tecniche, incluso il codice sorgente, necessarie a un computer per acquisire un'immagine scansionata e convertirla in dati binari.
+Il sesto di questi elementi, il documento Tecnologia di Recupero Dati, descrive i requisiti e i processi per utilizzare uno scanner per acquisire i dati su un singolo fotogramma di pellicola codificato digitalmente e trasformarlo in una forma suscettibile di analisi al computer. L'ottavo di essi, la Descrizione del Formato del Frame 4K Generico, fornisce le informazioni tecniche, incluso il codice sorgente, necessarie a un computer per acquisire un'immagine scansionata e convertirla in dati binari.
 
 È teoricamente possibile, in linea di principio, convertire un repository da dati con codifica QR a dati binari senza utilizzare un computer. Tuttavia, sarebbe enormemente difficile e probabilmente richiederebbe uno sforzo considerevole da parte di una comunità ben organizzata per molte settimane, se non mesi o anni. Poiché i contenuti dei repository sono software destinati a essere eseguiti su un computer, il loro utilizzo in assenza di un computer sarebbe minimo nella migliore delle ipotesi.
 
-Nel caso in cui gli eredi di questo archivio non abbiano computer, dovrebbero mantenere l'archivio intero e al sicuro fino a quando non lo avranno. Uno degli scopi dell'albero tecnologico leggibile dall'uomo è quello di aiutare ad accelerare lo sviluppo di tecnologie e computer in caso di questa eventualità. (Il suo altro scopo è codificare la nostra tecnologia e il suo sviluppo per gli storici futuri.)
+Nel caso in cui gli eredi di questo archivio non abbiano computer, dovrebbero mantenere l'archivio intero e al sicuro fino a quando non li avranno. Uno degli scopi dell'albero tecnologico leggibile dall'uomo è quello di aiutare ad accelerare lo sviluppo di tecnologie e computer in caso di questa eventualità. (Il suo altro scopo è codificare la nostra tecnologia e il suo sviluppo per gli storici futuri).
 
 ### Decomprimere il file di archivio nei sottofile separati che contiene
 
@@ -152,7 +152,7 @@ Il file binario per ogni repository è in un formato noto come TAR, per Tape Arc
 
 Ogni sottofile all'interno di un file TAR è preceduto da un record di intestazione di 512 byte, che agisce come il nastro nella metafora dello scorrimento. Questo record di intestazione contiene informazioni sul file, come il nome e la dimensione. La fine dell'archivio è indicata da almeno due blocchi consecutivi di 512 byte.
 
-Poiché i file TAR sono essenzialmente solo raccolte di file con record di testo tra di loro, se un file TAR contiene tutti i file di testo, può essere trattato come un file di testo stesso. Se contiene una miscela, può essere trattato come un file di testo che contiene una miscela di testo strutturato e significativo (i file di testo costituenti) e incomprensibili parole senza senso (i file non di testo costituenti).
+Poiché i file TAR sono essenzialmente solo raccolte di file con record di testo tra di loro, se un file TAR contiene tutti i file di testo, può essere trattato come un file di testo stesso. Se contiene una miscela dei due tipi, può essere trattato come un file di testo che contiene una miscela di testo strutturato e significativo (i file di testo costituenti) e incomprensibili parole senza senso (i file non-di-testo costituenti).
 
 È possibile annidare i file TAR all'interno di file TAR, un contenitore all'interno di un altro, ed è così che viene memorizzata la maggior parte dei nostri dati archiviati. Per ogni dato repository, il file TAR esterno conterrà almeno:
 
@@ -162,37 +162,37 @@ Poiché i file TAR sono essenzialmente solo raccolte di file con record di testo
 
 Altri metadati, come wiki, pagine gh, problemi e richieste pull, possono anche essere inclusi come file compressi separati.
 
-I dettagli specifici dei file TAR e il software per codificarli e decodificarli, possono essere trovati nelle Informazioni di rappresentazione in ogni bobina dell'archivio.
+I dettagli specifici dei file TAR e il software per codificarli e decodificarli, possono essere trovati nelle Informazioni sulla Rappresentazione in ogni bobina dell'archivio.
 
 ### Decomprimere file compressi in file leggibili e non compressi
 
 Per includere quanti più archivi e quanti più dati possibile, la maggior parte dei dati è stata compressa. Compressione significa utilizzare una piccola quantità di dati per rappresentare una quantità maggiore, utilizzando modelli e ripetizioni in quella quantità maggiore. Ad esempio, invece di scrivere il carattere per nove volte di seguito, si potrebbe semplicemente scrivere il testo compresso 9a, se si fosse certi che il lettore avrebbe capito che 9a significava il testo non compresso aaaaaaaaa.
 
-Gli algoritmi di compressione efficaci sono molto più complessi di così, ma si applica lo stesso principio. Questo archivio utilizza un programma di compressione noto come "XZ", che a sua volta utilizza un algoritmo noto come "LZMA". Il secondo file di dati in ogni bobina contiene il codice sorgente e la documentazione per XZ in un unico file di archivio TAR non compresso, descritto di seguito. (Il primo file di dati contiene la Dichiarazione universale dei diritti umani in ogni lingua umana scritta disponibile.)
+Gli algoritmi di compressione efficaci sono molto più complessi di così, ma si applica lo stesso principio. Questo archivio utilizza un programma di compressione noto come 'XZ', che a sua volta utilizza un algoritmo noto come 'LZMA'. Il secondo file di dati in ogni bobina contiene il codice sorgente e la documentazione per XZ in un unico file di archivio TAR non compresso, descritto di seguito. (Il primo file di dati contiene la Dichiarazione Universale dei Diritti Umani in ogni lingua umana scritta disponibile).
 
-LZMA combina ciò che è noto come algoritmo "LZ77" e "codifica intervallo". LZ77 sostituisce i dati ripetuti con riferimenti alle precedenti apparizioni di quei dati. Ad esempio, per semplificare eccessivamente, se una frase di 80 byte appare due volte, a 400 byte di distanza, la seconda volta, l'algoritmo essenzialmente compatta i dati dicendo "ripeti 80 byte da 400 byte fa". La codifica dell'intervallo converte essenzialmente un intero messaggio in un unico numero molto lungo, che a sua volta può essere codificato.
+LZMA combina ciò che è noto come algoritmo 'LZ77' e "codifica intervallo". LZ77 sostituisce i dati ripetuti con riferimenti alle precedenti apparizioni di quei dati. Ad esempio, per semplificare grossolanamente, se una frase di 80 byte appare due volte, a 400 byte di distanza, la seconda volta, l'algoritmo essenzialmente compatta i dati dicendo "ripeti 80 byte da 400 byte fa". La codifica dell'intervallo converte essenzialmente un intero messaggio in un unico numero molto lungo, che a sua volta può essere codificato.
 
 I passaggi specifici dell'algoritmo da utilizzare per decomprimere i dati sono descritti dal codice sorgente XZ contenuto nel secondo file di dati in ogni bobina. Sebbene sia teoricamente possibile decomprimere a mano, ancora una volta, questo sarebbe un processo straordinariamente dispendioso in termini di tempo e lavoro. In pratica, sarebbe necessario un computer funzionante.
 
 ### Conversione di ogni singolo file in caratteri scritti
 
-L'umanità ha utilizzato molti caratteri scritti nel corso dei millenni. La codifica utilizzata per rappresentare questi caratteri come 1 e 0 all'interno di questo archivio è nota come "UTF-8". Un singolo carattere UTF-8, ovvero un singolo simbolo scritto, può occupare da 1 a 4 byte di dati binari.
+L'umanità ha utilizzato molti caratteri scritti nel corso dei millenni. La codifica utilizzata per rappresentare questi caratteri come 1 e 0 all'interno di questo archivio è nota come 'UTF-8'. Un singolo carattere UTF-8, ovvero un singolo simbolo scritto, può occupare da 1 a 4 byte di dati binari.
 
-Per motivi storici, poiché erano i più utilizzati nel tempo e nella regione in cui e quando è iniziato lo sviluppo del software, un gruppo di caratteri (e concetti) noti come "ASCII" sono codificati in modo più efficiente, a 1 byte per carattere. Tutto ciò che non è ASCII è codificato come 2 o più byte per carattere. La maggior parte dei file di testo in questo archivio sono ASCII, ma molti non lo sono. Molti altri saranno principalmente ASCII con caratteri occasionali non ASCII.
+Per motivi storici, poiché erano i più utilizzati nel tempo e nella regione in cui e quando è iniziato lo sviluppo del software, un gruppo di caratteri (e concetti) noti come 'ASCII' sono codificati in modo più efficiente, a 1 byte per carattere. Tutto ciò che non è ASCII è codificato come 2 o più byte per carattere. La maggior parte dei file di testo in questo archivio sono ASCII, ma molti non lo sono. Molti altri saranno principalmente ASCII con caratteri occasionali non ASCII.
 
 Le specifiche dettagliate di ASCII possono essere trovate nelle Informazioni di rappresentazione in ogni bobina dell'archivio. Le specifiche dettagliate di UTF-8 possono essere trovate nella bobina guida. Il primo file di dati su ogni bobina dell'archivio conterrà il testo della Dichiarazione universale dei diritti umani in ogni lingua umana scritta disponibile. Questo servirà sia come strumento di traduzione che come esempio di ASCII e UTF-8.
 
 ## Tipi di file
 
-Esistono molti tipi diversi di file di testo, creati per motivi diversi. Il tipo principale qui, il motivo per cui esiste questo archivio, è il codice sorgente. Il codice sorgente è un testo molto denso ed estremamente strutturato, in cui simboli come "{" e ";" hanno una grande importanza.
+Esistono molti tipi diversi di file di testo, creati per motivi diversi. Il tipo principale qui, il motivo per cui esiste questo archivio, è il codice sorgente. Il codice sorgente è un testo molto denso ed estremamente strutturato, in cui simboli come '{' e ';' hanno una grande importanza.
 
 La cosa fondamentale del codice sorgente è che è scritto per essere letto dai compilatori. Poiché i compilatori sono software, un altro modo di formulare questo è che il codice sorgente è scritto per essere letto dai computer. Un buon codice è scritto anche in modo che altri esseri umani, se sono esperti e istruiti nel campo del software, possano capirlo; ma è corretto solo se un compilatore può capirlo.
 
-Quel compilatore, a sua volta, attraverso complicate sequenze descritte nell'albero tecnologico, convertirà il codice sorgente nelle sequenze di uno e zero che faranno eseguire al computer le funzioni e le attività descritte dal codice. Per fare un esempio molto semplice, la riga di codice
+Quel compilatore, a sua volta, attraverso complicate sequenze descritte nell'Albero Tecnologico, convertirà il codice sorgente nelle sequenze di uno e zero che faranno eseguire al computer le funzioni e le attività descritte dal codice. Per fare un esempio molto semplice, la riga di codice
 
-_for (int i = 0; i <5; i ++) {} _
+_for (int i=0; i<5; i++) {}_
 
-sarà convertito dal compilatore in una serie di istruzioni binarie fornite al computer, che farà sì che una piccola parte del computer, chiamata registro, imposti il ​​suo valore a 0, e successivamente incrementerà quel valore a 1, 2, 3 e poi 4. (Questo non è inteso come un esempio di codice utile; è solo un'illustrazione del processo a più livelli di trasformare il codice sorgente in software in esecuzione.)
+sarà convertito dal compilatore in una serie di istruzioni binarie fornite al computer, che farà sì che una piccola parte del computer, chiamata registro, imposti il suo valore a 0, e successivamente incrementerà quel valore a 1, 2, 3 e poi 4. (Questo non è inteso come un esempio di codice utile; è solo un'illustrazione del processo a più livelli di trasformare il codice sorgente in software in esecuzione).
 
 Altri tipi di file di testo, come JSON, XML e HTML, vengono utilizzati per memorizzare i dati (al contrario dei comandi) per i computer. Sono generalmente leggibili anche dagli esseri umani, sebbene i loro formati strutturati li rendano più difficili da leggere rispetto a testi di narrazione meno strutturati come questo file.
 
@@ -200,15 +200,15 @@ La maggior parte degli altri tipi di file di testo sono destinati ad essere even
 
 Può essere utile anche una breve panoramica delle forme più comuni di file non di testo. Il codice compilato non è testo. I file JPG e PNG codificano le immagini in formato digitale e MP3 e WAV codificano l'audio. I file PDF codificano i documenti con una formattazione precisa e perfetta. E i file ZIP e TAR, come accennato in precedenza, sono file contenitore che a loro volta possono includere uno o molti altri file.
 
-## Linguaggi umani e linguaggi di programmazione
+## Linguaggi Umani e Linguaggi di Programmazione
 
-### Lingue umane
+### Lingue Umane
 
 Ci sono migliaia di lingue scritte usate dall'umanità oggi e anche più lingue parlate. La maggior parte di queste sono usate solo da popolazioni relativamente piccole, ma ci sono almeno venti lingue usate come prima o seconda lingua da almeno 60 milioni di persone.
 
 Le lingue più utilizzate al mondo sono l'inglese e il cinese. Per ragioni storiche, per molti anni la maggior parte dello sviluppo del software è avvenuto nelle nazioni anglofone, quindi per un certo periodo l'inglese è diventato la lingua predefinita del software. La maggior parte dei linguaggi di programmazione utilizza parole inglesi nella loro sintassi. È la lingua in cui è stata scritta per la prima volta questa guida all'archivio.
 
-Non è garantito che gli eredi di questo archivio conoscano l'inglese, anche se sembra una lingua particolarmente probabile che duri indefinitamente. Nel caso in cui alcune indicazioni in altre lingue siano utili, includiamo le oltre 500 traduzioni disponibili della Dichiarazione universale dei diritti umani come file UTF-8 non compresso all'inizio di ogni bobina e anche all'interno dell'albero tecnologico. Questa dichiarazione è un elenco dei diritti e delle libertà di ogni singolo essere umano nella nostra epoca, che non devono mai essere portati via.
+Non è garantito che gli eredi di questo archivio conoscano l'inglese, anche se sembra una lingua particolarmente probabile che duri indefinitamente. Nel caso in cui alcune indicazioni in altre lingue siano utili, includiamo le oltre 500 traduzioni disponibili della Dichiarazione Universale dei Diritti Umani come file UTF-8 non compresso all'inizio di ogni bobina e anche all'interno dell'Albero Tecnologico. Questa dichiarazione è un elenco dei diritti e delle libertà di ogni singolo essere umano nella nostra epoca, che non devono mai essere portati via.
 
 ### Linguaggi di programmazione
 
