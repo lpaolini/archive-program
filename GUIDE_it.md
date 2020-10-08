@@ -210,15 +210,15 @@ Le lingue più utilizzate al mondo sono l'inglese e il cinese. Per ragioni stori
 
 Non è garantito che gli eredi di questo archivio conoscano l'inglese, anche se sembra una lingua particolarmente probabile che duri indefinitamente. Nel caso in cui alcune indicazioni in altre lingue siano utili, includiamo le oltre 500 traduzioni disponibili della Dichiarazione Universale dei Diritti Umani come file UTF-8 non compresso all'inizio di ogni bobina e anche all'interno dell'Albero Tecnologico. Questa dichiarazione è un elenco dei diritti e delle libertà di ogni singolo essere umano nella nostra epoca, che non devono mai essere portati via.
 
-### Linguaggi di programmazione
+### Linguaggi di Programmazione
 
-I linguaggi di programmazione sono quelli utilizzati dagli esseri umani per comunicare le istruzioni ai computer. Sono le lingue in cui si esprime il software. Anche altri umani (addestrati) dovrebbero essere in grado di leggere il software scritto nei linguaggi di programmazione, ma questo è un obiettivo secondario.
+I Linguaggi di Programmazione sono quelli utilizzati dagli esseri umani per comunicare le istruzioni ai computer. Sono le lingue in cui si esprime il software. Anche altri umani (istruiti) dovrebbero essere in grado di leggere il software scritto nei linguaggi di programmazione, ma questo è un obiettivo secondario.
 
 Un linguaggio di programmazione è un insieme di elementi predefiniti, la maggior parte dei quali sono parole, che possono essere disposti in modo strutturato per istruire un computer a eseguire l'azione specificata nel modo specificato. Una raccolta di tali istruzioni è nota come programma o codice sorgente. Il codice sorgente è essenzialmente un software in una forma scritta congelata.
 
 I programmi sono generalmente suddivisi in fasi distinte, note come istruzioni, che a loro volta sono raggruppate in raccolte note come funzioni. Un intero programma può essere contenuto in un singolo file o può essere distribuito su migliaia.
 
-Esistono centinaia di linguaggi di programmazione diversi, distribuiti in molte forme, approcci e filosofie differenti. Alcuni vengono compilati in file binari separati, che vengono poi eseguiti; alcuni, conosciuti come linguaggi "interpretati", sono effettivamente compilati ed eseguiti tutti in una volta, senza una fase intermedia. La maggior parte dei linguaggi di programmazione moderni include librerie di funzioni pre-scritte e tali librerie possono essere molto voluminose ed elaborate. Alcuni dei linguaggi di programmazione più popolari di oggi includono:
+Esistono centinaia di linguaggi di programmazione diversi, distribuiti in molte forme, approcci e filosofie differenti. Alcuni vengono compilati in file binari separati, che vengono poi eseguiti; alcuni, conosciuti come linguaggi "interpretati", sono effettivamente compilati ed eseguiti tutti in una volta, senza una fase intermedia. La maggior parte dei linguaggi di programmazione moderni include librerie di funzioni pre-scritte e tali librerie possono essere molto voluminose ed elaborate. Alcuni dei linguaggi di programmazione più popolari di oggi sono:
 
 - C, uno dei linguaggi più antichi e veloci, più universali e potenti, semplice per certi versi ma piuttosto limitato per altri, e non sempre intuitivo, facile da leggere o facile da imparare.
 
@@ -230,7 +230,7 @@ Esistono centinaia di linguaggi di programmazione diversi, distribuiti in molte 
 
 - JavaScript, piuttosto diverso da Java nonostante la somiglianza nel nome, e noto anche come 'ECMAScript', è un linguaggio inizialmente utilizzato interamente all'interno di un browser web, ovvero un programma che recupera, interpreta e visualizza i dati da un computer remoto noto come Internet server; oggi, però, è ampiamente utilizzato anche su quei server.
 
-- TypeScript, una forma di JavaScript con regole più rigide in modo che gli errori, noti anche come bug, abbiano meno probabilità di trovare la loro strada nei programmi.
+- TypeScript, una forma di JavaScript con regole più rigide in modo che gli errori, noti anche come bug, abbiano meno probabilità di essere introdotti nei programmi.
 
 - Python, un linguaggio elegante popolare tra gli scienziati, potente e un buon primo linguaggio.
 
@@ -244,23 +244,30 @@ Esistono centinaia di linguaggi di programmazione diversi, distribuiti in molte 
 
 - PHP, un linguaggio semplice utilizzato per i server Internet.
 
-- Lisp, un linguaggio molto antico con un approccio alla programmazione basato sulla funzione fondamentalmente diverso.
+- Lisp, un linguaggio molto antico con un approccio fondamentalmente diverso alla programmazione basato sulle funzioni.
 
 - SQL, un tipo di linguaggio molto diverso utilizzato per recuperare i dati da archivi di dati strutturati e altamente efficienti noti come database.
 
 - Assembler (o assembly), una famiglia di linguaggi molto criptica, limitata, ma veloce e potente in cui esiste una relazione diretta tra i costrutti del linguaggio e il codice macchina del computer in questione; può essere considerato codice compilato a metà.
 
-## Sviluppo, dipendenze e open source
+## Sviluppo, Dipendenze e Open Source
 
 ### Sviluppo
 
 Il processo di prendere un singolo, semplice file di codice sorgente e convertirlo in impulsi elettrici all'interno di un computer è estremamente complesso. Affrontiamo questa complessità utilizzando livelli di astrazione. Un'astrazione nota come set di istruzioni consente di utilizzare l'output del codice macchina da un singolo compilatore su molti tipi diversi di computer. Un autore di codice sorgente di solito non ha bisogno di sapere o preoccuparsi di quale tipo di computer, o anche quale set di istruzioni, sarà usato per eseguire quel codice; questo viene estratto dal compilatore.
 
-Il software moderno è, a sua volta, molto più complesso di un singolo autore che lavora su un singolo programma per un singolo computer. È composto da molti autori che lavorano su molti file all'interno di un singolo progetto, contemporaneamente, spesso utilizzando più linguaggi di programmazione. Inoltre, ogni progetto dipende da altri progetti separati e autonomi come strumenti e / o componenti, mentre questi progetti sono essi stessi attivamente elaborati e dipendono a loro volta da altri progetti. Far lavorare insieme tutte queste parti mobili in modo elegante ed efficiente è la sfida dello sviluppo del software moderno.
+Il software moderno è, a sua volta, molto più complesso di un singolo autore che lavora su un singolo programma per un singolo computer. È composto da molti autori che lavorano su molti file all'interno di un singolo progetto, contemporaneamente, spesso utilizzando più linguaggi di programmazione. Inoltre, ogni progetto dipende da altri progetti separati e autonomi come strumenti e/o componenti, mentre questi progetti sono essi stessi attivamente elaborati e dipendono a loro volta da altri progetti. Far lavorare insieme tutte queste parti mobili in modo elegante ed efficiente è la sfida dello sviluppo del software moderno.
 
 Quando più autori di codice sorgente, noti anche come sviluppatori di software, lavorano su un singolo progetto, ognuno ha il proprio computer e una copia dell'intero progetto sul proprio computer. Se ognuno di loro apporta modifiche, ognuno ha una versione diversa dello stesso progetto. Il processo di riconciliazione di più versioni di un progetto è noto come controllo della versione. È gestito dal software di controllo della versione; in questo archivio, dal software chiamato Git, da cui prende il nome GitHub stesso. Ogni repository in questo archivio è un repository Git.
 
 Git può unire automaticamente diverse versioni del software in una forma coerente con un intervento umano minimo richiesto. Git mantiene anche una cronologia completa che ti consente di tornare a una versione precedente come e quando necessario. Tuttavia, per risparmiare spazio, i repository di questo archivio generalmente non includono le cronologie Git.
+
+
+
+
+
+
+
 
 Quando più sviluppatori accettano un progetto su più percorsi diversi contemporaneamente, ciò è noto come diramazione di un progetto e quei percorsi sono noti come rami. Il ramo principale concordato di un progetto è noto come trunk o ramo principale. Git fornisce una struttura che gli sviluppatori possono utilizzare per riassumere le differenze tra due rami e proporre di unire i loro a quelli dell'altro. Questa operazione è nota come richiesta pull. Lo sviluppo del software moderno consiste in gran parte nel ramificare un progetto, scrivere o modificare il software sul tuo ramo e, al termine, inviare una richiesta pull affinché il tuo lavoro venga reincorporato nel ramo principale.
 
