@@ -40,7 +40,7 @@ Naturalmente, non tutti questi archivi sono ugualmente importanti in termini di 
 
 L'archivio è composto da 188 bobine di pellicola: una "bobina guida" di informazioni e guida leggibili dall'uomo, che chiamiamo Albero Tecnologico, e 187 bobine di software archiviato. Ogni bobina include 65.000 fotogrammi singoli. I fotogrammi all'inizio di ogni bobina e i fotogrammi della bobina guida includono testo e immagini leggibili dall'uomo. Tutti gli altri fotogrammi del film sono costituiti da dati digitali memorizzati in una forma visiva nota come codici QR.
 
-Per dati digitali si intendono i dati memorizzati in definitiva in formato binario, cioè come 0 e 1, perché i computer stessi sono binari -- controllati da segnali elettrici che sono "on" o "off", corrispondenti a 1 o 0 -- e quindi i dati binari sono molto più facili da capire per i computer rispetto a qualsiasi altri.
+Per dati digitali in definitiva si intendono i dati memorizzati in formato binario, cioè come zeri e uni, perché i computer stessi sono binari -- controllati da segnali elettrici che sono "on" o "off", corrispondenti a 1 o 0 -- e quindi i dati binari sono molto più facili da capire per i computer rispetto a qualsiasi altro.
 
 I metadati leggibili dall'uomo memorizzati all'inizio di ogni bobina includono informazioni sul film stesso, una guida alla codifica QR utilizzata, un programma software per decodificarlo e un indice. L'indice elenca il titolo, il numero di fotogramma iniziale e il checksum per ogni file memorizzato su quella bobina.
 
